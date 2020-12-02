@@ -13,8 +13,6 @@
 		0478CE6A2576474200701133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478CE682576474200701133 /* Main.storyboard */; };
 		0478CE6C2576474600701133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0478CE6B2576474600701133 /* Assets.xcassets */; };
 		0478CE6F2576474600701133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0478CE6D2576474600701133 /* LaunchScreen.storyboard */; };
-		0478CE7A2576474600701133 /* I_am_richTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478CE792576474600701133 /* I_am_richTests.swift */; };
-		0478CE852576474600701133 /* I_am_richUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478CE842576474600701133 /* I_am_richUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +42,8 @@
 		0478CE6E2576474600701133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0478CE702576474600701133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0478CE752576474600701133 /* I am richTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I am richTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0478CE792576474600701133 /* I_am_richTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_am_richTests.swift; sourceTree = "<group>"; };
-		0478CE7B2576474600701133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0478CE802576474600701133 /* I am richUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I am richUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0478CE842576474600701133 /* I_am_richUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_am_richUITests.swift; sourceTree = "<group>"; };
-		0478CE862576474600701133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0478CE9B2576480700701133 /* I am rich.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "I am rich.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				0478CE612576474200701133 /* I am rich */,
-				0478CE782576474600701133 /* I am richTests */,
-				0478CE832576474600701133 /* I am richUITests */,
 				0478CE602576474200701133 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +92,7 @@
 		0478CE612576474200701133 /* I am rich */ = {
 			isa = PBXGroup;
 			children = (
+				0478CE9B2576480700701133 /* I am rich.entitlements */,
 				0478CE622576474200701133 /* AppDelegate.swift */,
 				0478CE642576474200701133 /* SceneDelegate.swift */,
 				0478CE662576474200701133 /* ViewController.swift */,
@@ -108,24 +102,6 @@
 				0478CE702576474600701133 /* Info.plist */,
 			);
 			path = "I am rich";
-			sourceTree = "<group>";
-		};
-		0478CE782576474600701133 /* I am richTests */ = {
-			isa = PBXGroup;
-			children = (
-				0478CE792576474600701133 /* I_am_richTests.swift */,
-				0478CE7B2576474600701133 /* Info.plist */,
-			);
-			path = "I am richTests";
-			sourceTree = "<group>";
-		};
-		0478CE832576474600701133 /* I am richUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0478CE842576474600701133 /* I_am_richUITests.swift */,
-				0478CE862576474600701133 /* Info.plist */,
-			);
-			path = "I am richUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +244,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0478CE7A2576474600701133 /* I_am_richTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0478CE852576474600701133 /* I_am_richUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,14 +410,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "I am rich/I am rich.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9P8HNB7GU;
 				INFOPLIST_FILE = "I am rich/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Aditya.I-am-rich";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AdityaGupta.I-am-Rich";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,14 +432,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "I am rich/I am rich.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9P8HNB7GU;
 				INFOPLIST_FILE = "I am rich/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Aditya.I-am-rich";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AdityaGupta.I-am-Rich";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
